@@ -99,30 +99,80 @@ class EnvironmentManager
         'APP_ENV='.$request->environment."\n".
         'APP_KEY='.'base64:'.base64_encode(Str::random(32))."\n".
         'APP_DEBUG='.$request->app_debug."\n".
-        'APP_LOG_LEVEL='.$request->app_log_level."\n".
-        'APP_URL='.$request->app_url."\n\n".
+        'APP_TIMEZONE=UTC'."\n".
+        'APP_URL='.$request->app_url."\n".
+        'ASSET_URL='.rtrim($request->app_url,'/').'/public'."\n".
+
+        'APP_LOCALE=en'."\n".
+        'APP_FALLBACK_LOCALE=en'."\n".
+        'APP_FAKER_LOCALE=en'."\n".
+
+        'APP_MAINTENANCE_DRIVER=file'."\n".
+        'BCRYPT_ROUNDS=12'."\n".
+        'LOG_CHANNEL=stack'."\n".
+        'LOG_STACK=single'."\n".
+        'LOG_DEPRECATIONS_CHANNEL=null'."\n".
+        'LOG_LEVEL='.$request->app_log_level."\n".
+
+
         'DB_CONNECTION='.$request->database_connection."\n".
         'DB_HOST='.$request->database_hostname."\n".
         'DB_PORT='.$request->database_port."\n".
         'DB_DATABASE='.$request->database_name."\n".
         'DB_USERNAME='.$request->database_username."\n".
         'DB_PASSWORD='.$request->database_password."\n\n".
+
         'BROADCAST_DRIVER='.$request->broadcast_driver."\n".
         'CACHE_DRIVER='.$request->cache_driver."\n".
-        'SESSION_DRIVER='.$request->session_driver."\n".
-        'QUEUE_DRIVER='.$request->queue_driver."\n\n".
-        'REDIS_HOST='.$request->redis_hostname."\n".
-        'REDIS_PASSWORD='.$request->redis_password."\n".
-        'REDIS_PORT='.$request->redis_port."\n\n".
-        'MAIL_DRIVER='.$request->mail_driver."\n".
-        'MAIL_HOST='.$request->mail_host."\n".
-        'MAIL_PORT='.$request->mail_port."\n".
-        'MAIL_USERNAME='.$request->mail_username."\n".
-        'MAIL_PASSWORD='.$request->mail_password."\n".
-        'MAIL_ENCRYPTION='.$request->mail_encryption."\n\n".
-        'PUSHER_APP_ID='.$request->pusher_app_id."\n".
-        'PUSHER_APP_KEY='.$request->pusher_app_key."\n".
-        'PUSHER_APP_SECRET='.$request->pusher_app_secret;
+
+        'SESSION_DRIVER=file'."\n".
+        'SESSION_LIFETIME=120'."\n".
+        'SESSION_ENCRYPT=false'."\n".
+        'SESSION_PATH=/'."\n".
+        'SESSION_DOMAIN=null'."\n".
+
+        'BROADCAST_CONNECTION=log'."\n".
+        'FILESYSTEM_DISK=local'."\n\n".
+
+        'QUEUE_CONNECTION=database'."\n".
+        'CACHE_STORE=database'."\n".
+        'CACHE_PREFIX='."\n".
+
+        'REDIS_CLIENT=phpredis'."\n".
+        'REDIS_HOST=127.0.0.1'."\n".
+        'REDIS_PASSWORD=null'."\n".
+        'REDIS_PORT=6379'."\n\n".
+
+        'MAIL_MAILER=smtp'."\n".
+        'MAIL_HOST=smtp.host.com'."\n".
+        'MAIL_PORT=587'."\n".
+        'MAIL_USERNAME=user'."\n".
+        'MAIL_PASSWORD=password'."\n".
+        'MAIL_ENCRYPTION=tsl'."\n\n".
+        'MAIL_FROM_ADDRESS=from@email.com'."\n".
+        'MAIL_FROM_NAME="${APP_NAME}"'."\n".
+
+        'AWS_ACCESS_KEY_ID='."\n".
+        'AWS_SECRET_ACCESS_KEY='."\n".
+        'AWS_DEFAULT_REGION=us-east-1'."\n".
+        'AWS_BUCKET='."\n".
+        'AWS_USE_PATH_STYLE_ENDPOINT=false'."\n".
+
+
+        'VITE_APP_NAME="${APP_NAME}"'."\n".
+        'SUPPORT_EMAIL=support@mail.com'."\n".
+        'SUPPORT_PHONE=12345678910'."\n".
+        'FACEBOOK_URL=https://www.facebook.com'."\n".
+        'INSTAGRAM_URL=https://www.instagram.com'."\n".
+        'TWITTER_URL=https://x.com'."\n".
+        'YOUTUBE_URL=https://www.youtube.com'."\n".
+        'LINKEDIN_URL=https://www.linkedin.com'."\n".
+        'CURRENCY_POSITION=left'."\n".
+        'APP_DATE_TIME_FORMAT="d/m/Y h:i"'."\n".
+        'APP_DATE_FORMAT="d/m/Y"'."\n".
+        'APP_TIME_FORMAT="h:i"'."\n".
+        'APP_CURRENCY=USD'."\n".
+        'APP_CURRENCY_SYMBOL=$'."\n";
 
         try {
             file_put_contents($this->envPath, $envFileData);

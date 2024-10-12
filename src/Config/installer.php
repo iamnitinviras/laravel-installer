@@ -13,7 +13,7 @@ return [
     |
     */
     'core' => [
-        'minPhpVersion' => '7.0.0',
+        'minPhpVersion' => '8.2',
     ],
     'final' => [
         'key' => true,
@@ -72,22 +72,6 @@ return [
                 'database_name'         => 'required|string|max:50',
                 'database_username'     => 'required|string|max:50',
                 'database_password'     => 'nullable|string|max:50',
-                'broadcast_driver'      => 'required|string|max:50',
-                'cache_driver'          => 'required|string|max:50',
-                'session_driver'        => 'required|string|max:50',
-                'queue_driver'          => 'required|string|max:50',
-                'redis_hostname'        => 'required|string|max:50',
-                'redis_password'        => 'required|string|max:50',
-                'redis_port'            => 'required|numeric',
-                'mail_driver'           => 'required|string|max:50',
-                'mail_host'             => 'required|string|max:50',
-                'mail_port'             => 'required|string|max:50',
-                'mail_username'         => 'required|string|max:50',
-                'mail_password'         => 'required|string|max:50',
-                'mail_encryption'       => 'required|string|max:50',
-                'pusher_app_id'         => 'max:50',
-                'pusher_app_key'        => 'max:50',
-                'pusher_app_secret'     => 'max:50',
             ],
         ],
     ],
