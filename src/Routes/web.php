@@ -1,79 +1,54 @@
 <?php
 
 Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' => 'IamNitinViras\LaravelInstaller\Controllers', 'middleware' => ['web', 'install']], function () {
-    Route::get('/', [
+
+    Route::get('/step0', [
         'as' => 'welcome',
         'uses' => 'WelcomeController@welcome',
     ]);
 
-    Route::get('environment', [
-        'as' => 'environment',
-        'uses' => 'EnvironmentController@environmentMenu',
+    Route::get('/step0', [
+        'as' => 'step0',
+        'uses' => 'WelcomeController@index',
     ]);
 
-    Route::get('environment/wizard', [
-        'as' => 'environmentWizard',
-        'uses' => 'EnvironmentController@environmentWizard',
+    Route::get('/step1', [
+        'as' => 'step1',
+        'uses' => 'WelcomeController@step1',
     ]);
 
-    Route::post('environment/saveWizard', [
-        'as' => 'environmentSaveWizard',
-        'uses' => 'EnvironmentController@saveWizard',
+    Route::get('/step2', [
+        'as' => 'step2',
+        'uses' => 'WelcomeController@step2',
     ]);
 
-    Route::get('environment/classic', [
-        'as' => 'environmentClassic',
-        'uses' => 'EnvironmentController@environmentClassic',
+    Route::any('/step3', [
+        'as' => 'step3',
+        'uses' => 'WelcomeController@step3',
     ]);
 
-    Route::post('environment/saveClassic', [
-        'as' => 'environmentSaveClassic',
-        'uses' => 'EnvironmentController@saveClassic',
+    Route::get('/step4', [
+        'as' => 'step4',
+        'uses' => 'WelcomeController@step4',
     ]);
 
-    Route::get('requirements', [
-        'as' => 'requirements',
-        'uses' => 'RequirementsController@requirements',
+    Route::get('/confirmImport', [
+        'as' => 'confirmImport',
+        'uses' => 'WelcomeController@confirmImport',
     ]);
 
-    Route::get('permissions', [
-        'as' => 'permissions',
-        'uses' => 'PermissionsController@permissions',
+    Route::get('/confirmInstall', [
+        'as' => 'confirmInstall',
+        'uses' => 'WelcomeController@confirmInstall',
     ]);
 
-    Route::get('database', [
-        'as' => 'database',
-        'uses' => 'DatabaseController@database',
+    Route::any('/finalizingSetup', [
+        'as' => 'finalizingSetup',
+        'uses' => 'WelcomeController@finalizingSetup',
     ]);
 
-    Route::get('final', [
-        'as' => 'final',
-        'uses' => 'FinalController@finish',
-    ]);
-});
-
-Route::group(['prefix' => 'update', 'as' => 'LaravelUpdater::', 'namespace' => 'IamNitinViras\LaravelInstaller\Controllers', 'middleware' => 'web'], function () {
-    Route::group(['middleware' => 'update'], function () {
-        Route::get('/', [
-            'as' => 'welcome',
-            'uses' => 'UpdateController@welcome',
-        ]);
-
-        Route::get('overview', [
-            'as' => 'overview',
-            'uses' => 'UpdateController@overview',
-        ]);
-
-        Route::get('database', [
-            'as' => 'database',
-            'uses' => 'UpdateController@database',
-        ]);
-    });
-
-    // This needs to be out of the middleware because right after the migration has been
-    // run, the middleware sends a 404.
-    Route::get('final', [
-        'as' => 'final',
-        'uses' => 'UpdateController@finish',
+    Route::get('/success', [
+        'as' => 'success',
+        'uses' => 'WelcomeController@success',
     ]);
 });
