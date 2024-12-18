@@ -1,4 +1,4 @@
-@extends('install.index')
+@extends('vendor.installer.index')
 
 @section('content')
     <?php if(isset($error)) { ?>

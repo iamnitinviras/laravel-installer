@@ -1,4 +1,4 @@
-@extends('install.index')
+@extends('vendor.installer.index')
 
 @section('content')
     <div class="row justify-content-center ins-two">

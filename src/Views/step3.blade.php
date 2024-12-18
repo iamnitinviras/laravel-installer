@@ -1,4 +1,4 @@
-@extends('install.index')
+@extends('vendor.installer.index')
 
 @section('content')
     <?php if(isset($db_connection) && $db_connection != "") { ?>

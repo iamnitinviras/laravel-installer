@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Creativeitem Software Installation" />
-    <meta name="author" content="Creativeitem" />
-    <title>{{ __('Installation') . ' | ' . __('Academy Laravel') }}</title>
+    <meta name="description" content="Laravel Scripts Installation" />
+    <meta name="author" content="Laravel Scripts" />
+    <title>Installation</title>
     <meta name="csrf_token" content="{{ csrf_token() }}" />
     <!-- End meta -->
 

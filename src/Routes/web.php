@@ -1,6 +1,6 @@
 <?php
 
-Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' => 'IamNitinViras\LaravelInstaller\Controllers', 'middleware' => ['web', 'install']], function () {
+Route::group(['prefix' => 'install', 'as' => 'LaravelInstaller::', 'namespace' => 'IamNitinViras\LaravelInstaller\Controllers', 'middleware' => ['web']], function () {
 
     Route::get('/step0', [
         'as' => 'welcome',
