@@ -23,7 +23,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ __('Application URL') }}</label>
+                                                    <label class="control-label mb-1">{{ __('Application URL') }}</label>
                                                     <input type="text" class="form-control eForm-control" name="app_url" required autofocus>
                                                     <small class="text-muted">{{ __('The url of your application') }}</small>
                                                 </div>
@@ -34,8 +34,8 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ __('Application Name') }}</label>
-                                                    <input type="text" class="form-control eForm-control" name="system_name" required>
+                                                    <label class="control-label mb-1">{{ __('Application Name') }}</label>
+                                                    <input type="text" class="form-control eForm-control" name="app_name" required>
                                                     <small class="text-muted">
                                                         {{ __('The name of your application') }}
                                                     </small>
@@ -47,7 +47,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ __('First name') }}</label>
+                                                    <label class="control-label mb-1">{{ __('First name') }}</label>
                                                     <input type="text" class="form-control eForm-control" name="first_name" required>
                                                     <small class="text-muted">
                                                         {{ __('First name of Administrator') }}
@@ -57,7 +57,7 @@
 
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ __('Last name') }}</label>
+                                                    <label class="control-label mb-1">{{ __('Last name') }}</label>
                                                     <input type="text" class="form-control eForm-control" name="last_name" required>
                                                     <small class="text-muted">
                                                         {{ __('Last name of Administrator') }}
@@ -69,7 +69,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ __('Your Email') }}</label>
+                                                    <label class="control-label mb-1">{{ __('Your Email') }}</label>
                                                     <input type="email" class="form-control eForm-control" name="admin_email" placeholder="Ex: john@example.com" required>
                                                     <small class="text-muted">
                                                         {{ __('Email address for administrator login') }}
@@ -83,7 +83,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ __('Password') }}</label>
+                                                    <label class="control-label mb-1">{{ __('Password') }}</label>
                                                     <input type="text" class="form-control eForm-control" name="admin_password" placeholder="" required>
                                                     <small class="text-muted">
                                                         {{ __('Admin login password') }}
@@ -97,7 +97,7 @@
                                         <div class="row">
                                             <div class="col-md-12">
                                                 <div class="form-group">
-                                                    <label class="control-label">{{ __('Your Phone') }}</label>
+                                                    <label class="control-label mb-1">{{ __('Your Phone') }}</label>
 
                                                     <input type="text" class="form-control eForm-control" name="admin_phone" placeholder="Ex: +9020040060" required>
                                                     <small class="text-muted">
