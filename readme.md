@@ -1,33 +1,3 @@
-# Laravel Web Installer | A Web Installer [Package](https://packagist.org/packages/iamnitinviras/laravel-installer)
-
-[![Total Downloads](https://poser.pugx.org/iamnitinviras/laravel-installer/d/total.svg)](https://packagist.org/packages/iamnitinviras/laravel-installer)
-[![Latest Stable Version](https://poser.pugx.org/iamnitinviras/laravel-installer/v/stable.svg)](https://packagist.org/packages/iamnitinviras/laravel-installer)
-[![License](https://poser.pugx.org/iamnitinviras/laravel-installer/license.svg)](https://packagist.org/packages/iamnitinviras/laravel-installer)
-
-- [About](#about)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Routes](#routes)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Help](#help)
-- [Screenshots](#screenshots)
-- [License](#license)
-
-## About
-
-Do you want your clients to be able to install a Laravel project just like they do with WordPress or any other CMS?
-This Laravel package allows users who don't use Composer, SSH etc to install your application just by following the setup wizard.
-The current features are :
-
-- Check For Server Requirements.
-- Check For Folders Permissions.
-- Ability to set database information.
-	- .env text editor
-	- .env form wizard
-- Migrate The Database.
-- Seed The Tables.
-
 ## Requirements
 
 * [Laravel 11.x](https://laravel.com/docs/11.x/installation)
