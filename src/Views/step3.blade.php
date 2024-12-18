@@ -28,7 +28,7 @@
                                         @csrf
                                         <hr>
                                         <div class="form-group">
-                                            <label class="control-label">{{ __('Database Host') }}</label>
+                                            <label class="control-label mb-1">{{ __('Database Host') }}</label>
                                             <input type="text" class="form-control eForm-control" name="hostname" placeholder="" required>
                                             <small class="text-muted">
                                                 {{ __("If 'localhost' does not work, you can get the hostname from web host") }}
@@ -36,7 +36,7 @@
                                         </div>
                                         <hr>
                                         <div class="form-group">
-                                            <label class="control-label">{{ __('Database Name') }}</label>
+                                            <label class="control-label mb-1">{{ __('Database Name') }}</label>
                                             <input type="text" class="form-control eForm-control" name="dbname" placeholder="" required autofocus>
                                             <small class="text-muted">
                                                 {{ __('The name of the database you want to use with this application') }}
@@ -44,7 +44,7 @@
                                         </div>
                                         <hr>
                                         <div class="form-group">
-                                            <label class="control-label">{{ __('Username') }}</label>
+                                            <label class="control-label mb-1">{{ __('Username') }}</label>
                                             <input autocomplete="off" id="asdas" type="text" class="form-control eForm-control" name="username" placeholder="" required>
                                             <small class="text-muted">
                                                 {{ __('Your database Username') }}
@@ -52,7 +52,7 @@
                                         </div>
                                         <hr>
                                         <div class="form-group">
-                                            <label class="control-label">{{ __('Password') }}</label>
+                                            <label class="control-label mb-1">{{ __('Password') }}</label>
                                             <input type="password" class="form-control eForm-control" name="password" placeholder="">
                                             <small class="text-muted">
                                                 {{ __('Your database Password') }}
