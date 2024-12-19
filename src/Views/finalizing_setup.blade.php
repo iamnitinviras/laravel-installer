@@ -24,7 +24,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="control-label mb-1">{{ __('Application URL') }}</label>
-                                                    <input type="text" class="form-control eForm-control" name="app_url" required autofocus>
+                                                    <input value="{{url('')}}" type="text" class="form-control eForm-control" name="app_url" required autofocus>
                                                     <small class="text-muted">{{ __('The url of your application') }}</small>
                                                 </div>
                                                 <hr>

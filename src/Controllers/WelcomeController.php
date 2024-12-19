@@ -53,11 +53,23 @@ class WelcomeController extends Controller
             // check db connection using the above credentials
             $db_connection = $this->check_database_connection($hostname, $username, $password, $dbname);
             if ($db_connection == 'success') {
+                
                 // proceed to step 4
                 session(['hostname' => $hostname]);
                 session(['username' => $username]);
                 session(['password' => $password]);
                 session(['dbname' => $dbname]);
+
+                $env_data = [
+                    'DB_HOST' => $hostname,
+                    'DB_DATABASE' => $dbname,
+                    'DB_USERNAME' => $username,
+                    'DB_PASSWORD' => $password,
+                ];
+    
+                DotenvEditor::setKeys($env_data)->save();
+                Artisan::call('config:clear');
+
                 return redirect()->route('LaravelInstaller::step4');
             } else {
                 return view('vendor.installer.step3', ['db_connection' => $db_connection]);
