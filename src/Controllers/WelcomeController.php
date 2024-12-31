@@ -21,13 +21,24 @@ class WelcomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function alreadyInstalled()
+    {
+        return file_exists(storage_path('installed'));
+    }
+
     public function index()
     {
+        if ($this->alreadyInstalled() == true){
+            return redirect('login');
+        }
         return view('vendor.installer.step0');
     }
 
     public function step1()
     {
+        if ($this->alreadyInstalled() == true){
+            return redirect('login');
+        }
         return view('vendor.installer.step1');
     }
 
@@ -37,6 +48,9 @@ class WelcomeController extends Controller
             $error = 'Purchase Code Verification Failed';
         } else {
             $error = "";
+        }
+        if ($this->alreadyInstalled() == true){
+            return redirect('login');
         }
         return view('vendor.installer.step2', ['error' => $error]);
     }
@@ -76,6 +90,10 @@ class WelcomeController extends Controller
             }
         }
 
+        if ($this->alreadyInstalled() == true){
+            return redirect('login');
+        }
+        
         return view('vendor.installer.step3', ['db_connection' => $db_connection]);
     }
 
