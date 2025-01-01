@@ -29,7 +29,7 @@
                             </p>
                             <br>
                             <p>
-                                <a href="{{ route('LaravelInstaller::step1') }}" class="btn btn-primary">
+                                <a href="{{ route('LaravelInstaller::step1') }}" class="btn btn-primary w-100">
                                     {{ __('Start Installation Process') }}
                                 </a>
                             </p>

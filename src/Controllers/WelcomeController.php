@@ -176,14 +176,14 @@ class WelcomeController extends Controller
             Artisan::call('config:clear');
 
             /*admin data*/
-            $admin_data['first_name']      = $data['first_name'];
-            $admin_data['last_name']      = $data['last_name'];
-            $admin_data['email']     = $data['admin_email'];
-            $admin_data['password']  = Hash::make($data['admin_password']);
-            $admin_data['user_type']      = 1;
-            $admin_data['phone_number']      = $data['admin_phone'];
-            $admin_data['email_verified_at'] = date('Y-m-d H:i:s', time());
-            $admin_data['created_at'] = date('Y-m-d H:i:s');
+            $admin_data['first_name']= $data['first_name'];
+            $admin_data['last_name']= $data['last_name'];
+            $admin_data['email']= $data['admin_email'];
+            $admin_data['password']=Hash::make($data['admin_password']);
+            $admin_data['user_type']=1;
+            $admin_data['phone_number']='1234567890';
+            $admin_data['email_verified_at']=date('Y-m-d H:i:s', time());
+            $admin_data['created_at']=date('Y-m-d H:i:s');
 
             DB::table('users')->insert($admin_data);
 

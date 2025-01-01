@@ -67,7 +67,7 @@
                                         </div>
 
                                         <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-1">{{ __('Your Email') }}</label>
                                                     <input type="email" class="form-control eForm-control" name="admin_email" placeholder="Ex: john@example.com" required>
@@ -75,13 +75,8 @@
                                                         {{ __('Email address for administrator login') }}
                                                     </small>
                                                 </div>
-                                                <hr>
                                             </div>
-                                        </div>
-
-
-                                        <div class="row">
-                                            <div class="col-md-12">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label class="control-label mb-1">{{ __('Password') }}</label>
                                                     <input type="text" class="form-control eForm-control" name="admin_password" placeholder="" required>
@@ -89,34 +84,11 @@
                                                         {{ __('Admin login password') }}
                                                     </small>
                                                 </div>
-                                                <hr>
                                             </div>
                                         </div>
-
-
                                         <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="control-label mb-1">{{ __('Your Phone') }}</label>
-
-                                                    <input type="text" class="form-control eForm-control" name="admin_phone" placeholder="Ex: +9020040060" required>
-                                                    <small class="text-muted">
-                                                        {{ __('Phone of Administrator') }}
-                                                    </small>
-                                                </div>
-                                                <hr>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="form-group">
-                                                    <label class="control-label"></label>
-                                                    <div class="col-sm-7">
-                                                        <button type="submit" class="btn btn-primary">{{ __('Set me up') }}</button>
-                                                    </div>
-                                                </div>
+                                            <div class="col-md-12 mt-5">
+                                                <button type="submit" class="btn btn-primary w-100">{{ __('Set me up') }}</button>
                                             </div>
                                         </div>
 

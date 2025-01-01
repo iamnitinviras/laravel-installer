@@ -19,7 +19,7 @@
 
                         <div class="panel-body ins-four">
                             <h6 class="ins-four">
-                                {{ __('Below you should enter your database connection details.') . ' ' . __('If you’re not sure about these, contact your host.') }}
+                                {{ __('Below you should enter your database connection details.')}}. <br/>{{__('If you’re not sure about these, contact your host.') }}
                             </h6>
                             <br>
                             <div class="row">
@@ -29,7 +29,7 @@
                                         <hr>
                                         <div class="form-group">
                                             <label class="control-label mb-1">{{ __('Database Host') }}</label>
-                                            <input type="text" class="form-control eForm-control" name="hostname" placeholder="" required>
+                                            <input type="text" class="form-control eForm-control" name="hostname" placeholder="" required autofocus>
                                             <small class="text-muted">
                                                 {{ __("If 'localhost' does not work, you can get the hostname from web host") }}
                                             </small>
@@ -37,7 +37,7 @@
                                         <hr>
                                         <div class="form-group">
                                             <label class="control-label mb-1">{{ __('Database Name') }}</label>
-                                            <input type="text" class="form-control eForm-control" name="dbname" placeholder="" required autofocus>
+                                            <input type="text" class="form-control eForm-control" name="dbname" placeholder="" required >
                                             <small class="text-muted">
                                                 {{ __('The name of the database you want to use with this application') }}
                                             </small>
@@ -53,7 +53,7 @@
                                         <hr>
                                         <div class="form-group">
                                             <label class="control-label mb-1">{{ __('Password') }}</label>
-                                            <input type="password" class="form-control eForm-control" name="password" placeholder="">
+                                            <input type="text" class="form-control eForm-control" name="password" placeholder="">
                                             <small class="text-muted">
                                                 {{ __('Your database Password') }}
                                             </small>
@@ -62,7 +62,7 @@
 
                                         <div class="form-group">
                                             <label class="control-label"></label>
-                                            <button type="submit" class="btn btn-primary">{{ __('Continue') }}</button>
+                                            <button type="submit" class="btn btn-primary w-100">{{ __('Continue') }}</button>
                                         </div>
                                     </form>
                                 </div>
